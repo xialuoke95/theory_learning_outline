@@ -29,9 +29,13 @@ day2  ....
 展开的计算图
 
 1、a1~a100 -> DNN -> a-embedding
+
 2、[a-embedding]n = f([a-embedding]n-1, [c-embedding]n-1 ,[d-embedding]n-1 )
+
 3、a-loss = cross-entropy(softmax(a-embedding))
+
 4、loss = sum(a~d loss).
+
 
 ```
 某种意义上，可以把图神经网络理解为RNN + attention + 人工跳接。
@@ -42,12 +46,17 @@ day2  ....
 ## 电商
 比上一问题多出的要素：
 1、节点间跳转（购买行为的【关联规则】）
+
 2、结构性 & 序列性
+
     2.1 相似的用户购买相似的商品（协同过滤）体现出的节点相似度的结构性
+
     2.2 同一用户购买商品的序列性，使得问题可以被转化为W2V类似问题进行训练
+
 
 比上一问题减少的要素：
 1、似乎不存在动态游走并进入收敛平衡态这一问题。
+
 
 
 # 算法
